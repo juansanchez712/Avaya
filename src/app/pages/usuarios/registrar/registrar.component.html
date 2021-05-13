@@ -1,1 +1,26 @@
-<p>registrar works!</p>
+<form (ngSubmit)="Guardar()" [formGroup]="usuarioForm">
+    <div class="form-group">
+        <label class="col-form-label" for="inputDefault">Nombre</label>
+        <input type="text" class="form-control" placeholder="Nombre completo" id="inputDefault" formControlName="nombre">
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" for="inputDefault">Correo</label>
+        <input type="text" class="form-control" placeholder="Correo electrónico" id="inputDefault" formControlName="correo">
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" for="inputDefault">Numero</label>
+        <input type="text" class="form-control" placeholder="Número teléfonico" id="inputDefault" formControlName="numero">
+    </div>
+    <div class="form-group">
+        <label for="exampleSelect1">Tipo de usuario</label>
+        <select class="form-select" id="exampleSelect1" formControlName="tipo">
+          <option>Inversionista</option>
+          <option>Emprendedor</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" for="inputDefault">Contraseña</label>
+        <input type="password" class="form-control" placeholder="Contraseña" id="inputDefault" formControlName="contrasena">
+    </div>
+    <button type="submit" class="btn btn-success">Registrar</button>
+</form>

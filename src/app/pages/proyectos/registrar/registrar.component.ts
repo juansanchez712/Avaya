@@ -9,7 +9,7 @@ import { ProyectoService } from '../proyecto.service';
 })
 export class RegistrarComponent implements OnInit {
 
-  usuarioForm: FormGroup | any;
+  proyectoForm: FormGroup | any;
   constructor(private fb: FormBuilder, private proyectosSvc: ProyectoService) { }
 
   ngOnInit(): void {
@@ -17,15 +17,15 @@ export class RegistrarComponent implements OnInit {
   }
 
   Guardar(): void {
-    if(this.usuarioForm.valid){
-      const proyecto =  this.usuarioForm.value;
+    if(this.proyectoForm.valid){
+      const proyecto =  this.proyectoForm.value;
       this.proyectosSvc.registrarProyecto(proyecto, '');
-      this.usuarioForm.reset();
+      this.proyectoForm.reset();
     }
   }
 
   private initForm():void {
-    this.usuarioForm = this.fb.group({
+    this.proyectoForm = this.fb.group({
       nombre: ['', [Validators.required]],
       objetivo: ['', [Validators.required]],
       descripcion: ['', [Validators.required]],
