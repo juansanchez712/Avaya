@@ -1,1 +1,9 @@
-<p>lista works!</p>
+<div class="card bg-light" *ngFor="let proyecto of proyectos$ | async">
+    <div class="card-header">{{proyecto.objetivo}}</div>
+    <div class="card-body">
+        <h4 class="card-title">{{proyecto.nombre}}</h4>
+        <p class="card-text">{{proyecto.descripcion}}</p>
+    </div>
+    <button type="button" class="btn btn-secondary" (click)="Aportar(proyecto)">Aportar</button>
+
+</div>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "avaya-3e306": {
+      "hosting": {
+        "Avaya": [
+          "avaya-3e306"
+        ]
+      }
+    }
+  }
+}
